@@ -1,2 +1,44 @@
-5
-2 101 27 10000000 5
+#include <stdio.h>
+
+int isPrime(int n)
+{
+	
+	int l=0;
+	for(int i=1;i<27;i++){
+		if(0==n%i){
+			l+=1; 
+		}
+	}
+	if(l==2){	
+	return 0;
+	}
+
+    else{
+    	return 1;
+	} 
+	
+	
+	
+	
+}
+
+int main()
+{
+
+int num[1100]={0,};
+
+	int n; //
+	 scanf("%d",&n);
+	 int m=0;
+for(int i=0;i<n;i++){
+	scanf("%d",&num[i]);
+}
+	 
+	for(int i=0;i<n;i++){
+	if(0==isPrime(num[i])) { m+=1; }
+
+}	
+   printf("%d",m);
+	
+	return 0;
+}
